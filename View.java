@@ -9,6 +9,6 @@ public class View {
     }
 
     public void showMessage(String message) {
-        System.out.print(message);
+        System.out.println(message);
     }
 }

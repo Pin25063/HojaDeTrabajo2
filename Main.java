@@ -5,8 +5,7 @@ import java.io.IOException;
 public class Main {
     
     public static void main(String[] args) {
-        Stack<Double> stack = new PilaVector<>();
-        CALC calculadora = new Calculadora(stack);
+        CALC calculadora = new Calculadora();
         View vista = new View();
 
         try (
@@ -21,7 +20,7 @@ public class Main {
                             vista.showMessage(line + " = " + result);
 
                         } catch (Exception e) {
-                            vista.showMessage("Error: " + e.getMessage());
+                            vista.showMessage(line + " Error: " + e.getMessage());
                         }
                     }
                 }

@@ -11,7 +11,7 @@ public class JUnitTests {
     @Before
     public void setup(){
         stack = new PilaVector<>();
-        calculadora = new Calculadora(stack);
+        calculadora = new Calculadora();
     }
 
     @Test

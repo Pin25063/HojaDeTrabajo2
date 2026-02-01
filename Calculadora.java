@@ -1,13 +1,8 @@
 public class Calculadora implements CALC{
     
-    private Stack<Double> stack;
-
-    public Calculadora(Stack<Double> stack) {
-        this.stack = stack;
-    }
-
     @Override
     public double Operate (String input){
+        Stack<Double> stack = new PilaVector<>();
         String[] expression = input.split(" ");
 
         for (int i = 0; i < expression.length; i++){
