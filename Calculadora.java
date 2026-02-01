@@ -17,8 +17,15 @@ public class Calculadora implements CALC{
                 double number = Double.parseDouble(token);
                 stack.push(number);
             } catch (NumberFormatException e) {
-                // Si es operador
+                
+                if (stack.peek() == null) {
+                    throw new IllegalArgumentException("No hay operandos suficientes");
+                }
                 double b = stack.pop();
+                
+                if (stack.peek() == null) {
+                    throw new IllegalArgumentException("No hay operandos suficientes");
+                }
                 double a = stack.pop();
 
                 switch (token) {
@@ -32,11 +39,21 @@ public class Calculadora implements CALC{
                     stack.push(a * b);
                     break;
                 case "/":
+                    if (b == 0) {
+                        throw new ArithmeticException("División entre cero");
+                    }
                     stack.push(a / b);
                     break;
+                default:
+                    throw new IllegalArgumentException("Operador inválido");
                 }
             }
         }
-        return stack.peek();
+        
+        double result = stack.pop();
+        if (stack.peek() != null) {
+            throw new IllegalArgumentException("Operación inválida");
+        }
+        return result;
     }
 }
