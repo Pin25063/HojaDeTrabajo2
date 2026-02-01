@@ -1,3 +1,3 @@
-public interface Calc {
-    public int Operate (String input);
+public interface CALC {
+    public double Operate (String input);
 }

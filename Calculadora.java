@@ -1,19 +1,25 @@
-public class Calculadora implements Calc{
+public class Calculadora implements CALC{
+    
+    private Stack<Double> stack;
 
-    public int Operate (String input){
+    public Calculadora(Stack<Double> stack) {
+        this.stack = stack;
+    }
+
+    @Override
+    public double Operate (String input){
         String[] expression = input.split(" ");
-        Stack<Integer> stack = new PilaVector<>();
 
         for (int i = 0; i < expression.length; i++){
             String token = expression[i];
             try {
                 // Si es número
-                int number = Integer.parseInt(token);
+                double number = Double.parseDouble(token);
                 stack.push(number);
             } catch (NumberFormatException e) {
                 // Si es operador
-                int b = stack.pop();
-                int a = stack.pop();
+                double b = stack.pop();
+                double a = stack.pop();
 
                 switch (token) {
                 case "+":
