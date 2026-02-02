@@ -3,6 +3,7 @@ public class Calculadora implements CALC{
     @Override
     public double Operate (String input){
         Stack<Double> stack = new PilaVector<>();
+        //PilaArrayList<Double> stack = new PilaArrayList<>();
         String[] expression = input.split(" ");
 
         for (int i = 0; i < expression.length; i++){
