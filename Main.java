@@ -1,3 +1,12 @@
+/**
+ * Clase principal del programa
+ * 
+ * Lee las operaciones desde un archivo datos.txt, donde cada línea representa una operación distinta
+ * 
+ * @author Jose Pinto 25063
+ * @author Valeria Hernández 25086
+*/
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,11 +18,11 @@ public class Main {
         View vista = new View();
 
         try (
-            FileReader FileReader = new FileReader("datos.txt");
-            BufferedReader BufferReader = new BufferedReader(FileReader);
+            FileReader fileReader = new FileReader("datos.txt");
+            BufferedReader bufferReader = new BufferedReader(fileReader);
             ) {
                 String line;
-                while ((line = BufferReader.readLine()) != null) {
+                while ((line = bufferReader.readLine()) != null) {
                     if (!line.trim().isEmpty()) {
                         try {
                             double result = calculadora.Operate(line);

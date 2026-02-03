@@ -1,3 +1,10 @@
+/**
+ * Implementación de una pila genérica usando Vector
+ * 
+ * @author Jose Pinto 25063
+ * @author Valeria Hernández 25086
+*/
+
 import java.util.Vector;
 
 public class PilaVector<T> implements Stack<T> { 

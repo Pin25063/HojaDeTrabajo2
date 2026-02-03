@@ -1,3 +1,10 @@
+/**
+ * Clase de pruebas unitarias con JUnit para comprobar el funcionamiento de los stacks y de la calculadora
+ * 
+ * @author Jose Pinto 25063
+ * @author Valeria Hernández 25086
+*/
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;

@@ -1,3 +1,10 @@
+/**
+ * Implementación de una pila genérica usando ArrayList
+ * 
+ * @author Jose Pinto 25063
+ * @author Valeria Hernández 25086
+*/
+
 import java.util.ArrayList;
 
 public class PilaArrayList<T> implements Stack<T>{

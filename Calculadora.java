@@ -1,5 +1,30 @@
+/**
+ * Implementación de una calculadora para expreciones postfix
+
+ * 
+ * @author Jose Pinto 25063
+ * @author Valeria Hernández 25086
+ */
+
 public class Calculadora implements CALC{
     
+
+    /**
+     * Evalúa la expresión
+     * 
+     * Precondición:
+     * - La cadena de entrada no debe ser nula
+     * - Los operandos y operadores deben de estar separados por un espacio
+     * 
+     * Postcondición:
+     * - Retorna el resultado de evaluar la operación
+     * - La pila se vacía al finalizar cada operación 
+     * 
+     * @param input de cadena con la operación para evaluar
+     * @return resultado de la operación 
+     * @throws IllegalArgumentException si el operador es inválido o no hay suficientes operandos
+     * @throws ArithmeticException si se intenta dividir entre cero
+     */
     @Override
     public double Operate (String input){
         Stack<Double> stack = new PilaVector<>();
