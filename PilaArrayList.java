@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class PilaArrayList<T> {
+public class PilaArrayList<T> implements Stack<T>{
     
     ArrayList<T> stack;
 
