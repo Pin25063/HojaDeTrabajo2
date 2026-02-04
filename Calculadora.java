@@ -27,6 +27,11 @@ public class Calculadora implements CALC{
      */
     @Override
     public double Operate (String input){
+        
+        if (input == null || input.trim().isEmpty()) {
+            throw new IllegalArgumentException("La entrada no puede estar vacía");
+        }
+        
         Stack<Double> stack = new PilaVector<>();
         //PilaArrayList<Double> stack = new PilaArrayList<>();
         String[] expression = input.split(" ");
