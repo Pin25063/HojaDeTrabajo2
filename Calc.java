@@ -20,5 +20,5 @@ public interface Calc {
      * @return resultado de la operación 
 
      */
-    public double Operate (String input);
+    public double operate (String input);
 }

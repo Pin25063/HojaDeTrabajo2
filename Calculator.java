@@ -7,8 +7,6 @@
  */
 
 public class Calculator implements Calc{
-    
-
     /**
      * Evalúa la expresión
      * 
@@ -26,7 +24,7 @@ public class Calculator implements Calc{
      * @throws ArithmeticException si se intenta dividir entre cero
      */
     @Override
-    public double Operate (String input){
+    public double operate (String input){
         
         if (input == null || input.trim().isEmpty()) {
             throw new IllegalArgumentException("La entrada no puede estar vacía");
@@ -44,15 +42,14 @@ public class Calculator implements Calc{
                 stack.push(number);
             } catch (NumberFormatException e) {
                 
-                if (stack.peek() == null) {
+                double a, b;
+
+                try {
+                    b = stack.pop();
+                    a = stack.pop();
+                } catch (Exception p) {
                     throw new IllegalArgumentException("No hay operandos suficientes");
                 }
-                double b = stack.pop();
-                
-                if (stack.peek() == null) {
-                    throw new IllegalArgumentException("No hay operandos suficientes");
-                }
-                double a = stack.pop();
 
                 switch (token) {
                 case "+":
@@ -76,10 +73,19 @@ public class Calculator implements Calc{
             }
         }
         
-        double result = stack.pop();
-        if (stack.peek() != null) {
+        double result;
+        try {
+            result = stack.pop(); //verifica que haya un resultado
+        } catch (Exception c) { 
             throw new IllegalArgumentException("Operación inválida");
         }
+
+        try {
+            stack.pop(); //verifica que no sobre ningun operando
+            throw new IllegalArgumentException("Operación inválida");
+        } catch (Exception x) {
+        }
+            
         return result;
     }
 }

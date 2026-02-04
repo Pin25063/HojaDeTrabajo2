@@ -25,7 +25,7 @@ public class Main {
                 while ((line = bufferReader.readLine()) != null) {
                     if (!line.trim().isEmpty()) {
                         try {
-                            double result = calculadora.Operate(line);
+                            double result = calculadora.operate(line);
                             vista.showMessage(line + " = " + result);
 
                         } catch (Exception e) {
