@@ -6,7 +6,7 @@
  * @author Valeria Hernández 25086
  */
 
-public class Calculator implements Calc_temp{
+public class Calculator implements Calc{
     
 
     /**

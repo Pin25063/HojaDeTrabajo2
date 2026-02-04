@@ -13,7 +13,7 @@ import org.junit.Test;
 public class JUnitTests {
 
     Stack<Double> stack;
-    Calc_temp calculadora;
+    Calc calculadora;
     
     @Before
     public void setup(){

@@ -14,7 +14,7 @@ import java.io.IOException;
 public class Main {
     
     public static void main(String[] args) {
-        Calc_temp calculadora = new Calculator();
+        Calc calculadora = new Calculator();
         View vista = new View();
 
         try (
