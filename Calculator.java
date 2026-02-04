@@ -6,7 +6,7 @@
  * @author Valeria Hernández 25086
  */
 
-public class Calculadora implements CALC{
+public class Calculator implements Calc_temp{
     
 
     /**
@@ -32,8 +32,8 @@ public class Calculadora implements CALC{
             throw new IllegalArgumentException("La entrada no puede estar vacía");
         }
 
-        Stack<Double> stack = new PilaVector<>();
-        //PilaArrayList<Double> stack = new PilaArrayList<>();
+        Stack<Double> stack = new StackO<>();
+        //PilaArrayList<Double> stack = new StackA<>();
         String[] expression = input.split(" ");
 
         for (int i = 0; i < expression.length; i++){

@@ -13,12 +13,12 @@ import org.junit.Test;
 public class JUnitTests {
 
     Stack<Double> stack;
-    CALC calculadora;
+    Calc_temp calculadora;
     
     @Before
     public void setup(){
-        stack = new PilaVector<>();
-        calculadora = new Calculadora();
+        stack = new StackO<>();
+        calculadora = new Calculator();
     }
 
     @Test

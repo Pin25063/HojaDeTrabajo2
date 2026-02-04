@@ -5,7 +5,7 @@
  * @author Valeria Hernández 25086
 */
 
-public interface CALC {
+public interface Calc_temp {
     /**
      * Evalúa la expresión
      * 

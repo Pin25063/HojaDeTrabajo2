@@ -7,11 +7,11 @@
 
 import java.util.ArrayList;
 
-public class PilaArrayList<T> implements Stack<T>{
+public class StackA<T> implements Stack<T>{
     
     ArrayList<T> stack;
 
-    public PilaArrayList() {
+    public StackA() {
         stack = new ArrayList<>();
     }
 

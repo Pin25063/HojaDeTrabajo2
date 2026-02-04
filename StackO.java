@@ -7,11 +7,11 @@
 
 import java.util.Vector;
 
-public class PilaVector<T> implements Stack<T> { 
+public class StackO<T> implements Stack<T> { 
     
     Vector<T> stack; 
 
-    public PilaVector(){
+    public StackO(){
         this.stack = new Vector<>();
     }
 
