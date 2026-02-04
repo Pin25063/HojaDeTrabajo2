@@ -39,7 +39,7 @@ public class JUnitTests {
 
     @Test
     public void isFinalResultFifteen(){
-        double result = calculadora.Operate("1 2 + 4 * 3 +");
+        double result = calculadora.operate("1 2 + 4 * 3 +");
         assertEquals(15, result, 0.0);
     }
 
@@ -55,21 +55,21 @@ public class JUnitTests {
 
     @Test (expected = ArithmeticException.class)
     public void divisionByZeroThrowsException() {
-        calculadora.Operate("6 0 /");
+        calculadora.operate("6 0 /");
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void insufficientOperandsThrowException() {
-        calculadora.Operate("1 +");
+        calculadora.operate("1 +");
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void invalidOperatorThrowsException() {
-        calculadora.Operate("1 2 x");
+        calculadora.operate("1 2 x");
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void invalidPostfixExpressionThrowsException() {
-        calculadora.Operate("1 2 3 +");
+        calculadora.operate("1 2 3 +");
     }
 }
